@@ -1,0 +1,15 @@
+service: numpy-test
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.8
+
+functions:
+  load_nymex:
+    handler: handler.load_nymex
+
+plugins:
+  - serverless-python-requirements
+  - serverless-offline
